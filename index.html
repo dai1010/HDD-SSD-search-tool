@@ -100,6 +100,12 @@
   .btn-copy:disabled { background: var(--border); color: var(--muted); cursor: not-allowed; transform: none; }
   .btn-copy.copied { background: var(--success); }
   .footer { margin-top: 24px; text-align: center; font-family: 'IBM Plex Mono', monospace; font-size: 10px; color: #444; letter-spacing: 0.1em; }
+  .hint {
+    font-size: 12px;
+    color: #999;
+    margin: 3px 0 8px;
+    line-height: 1.5;
+  }
 </style>
 </head>
 <body>
@@ -111,6 +117,7 @@
   </div>
 
   <span class="section-label">MAKER</span>
+  <p class="hint">PCの製造メーカーを選択してください。底面シールに記載があります。</p>
   <div class="chips-row" id="makerRow">
     <button class="chip" data-maker="Dell">Dell</button>
     <button class="chip" data-maker="HP">HP</button>
@@ -126,6 +133,7 @@
 
   <div class="input-block">
     <span class="input-label">MODEL NAME</span>
+    <p class="hint">例：ThinkPad X1 Carbon Gen9 ／ Surface Pro 9 ／ Inspiron 15 3511</p>
     <div class="input-row">
       <input type="text" id="modelInput" placeholder="例: Inspiron 15 3511" autocomplete="off" autocorrect="off" spellcheck="false" />
       <button class="mic-btn" id="micBtn" title="音声入力">
@@ -141,6 +149,7 @@
   </div>
 
   <span class="section-label">DRIVE TYPE</span>
+  <p class="hint">HDD/SSD は両方対象、M.2 SSD は薄型ノートに多い小型タイプです。</p>
   <div class="chips-row" id="driveRow">
     <button class="chip active" data-val="HDD/SSD">HDD/SSD</button>
     <button class="chip" data-val="HDD">HDD のみ</button>
@@ -149,6 +158,7 @@
   </div>
 
   <span class="section-label">OPTIONS</span>
+  <p class="hint">iFixit は分解・修理ガイドのサイトです。URLをプロンプトに含めるとAIが参照できます。</p>
   <div class="toggle-row">
     <button class="toggle-btn" id="ifixitToggle">iFixit URL を含める</button>
   </div>
